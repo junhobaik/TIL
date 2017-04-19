@@ -1,5 +1,31 @@
 # Closuer
 
+- 함수, 함수가 선언될 때의 environment로 구성
+- 함수가 정의 될 때의 environment가 함께 closure로 결합되면서, 다양한 활용이 가능
+
+```js
+function makeCounterFunction(initVal){
+    var count = initVal;
+    function Increase(){
+        count++;
+        console.log(count);
+    }
+    return Increase;
+}
+
+var counter1 = makeCounterFunction(0);
+var counter2 = makeCounterFunction(10);
+```
+- counter1의 closure
+    - 함수 : function Increase(){}
+    - 환경 : var count = 0;
+- counter2의 closure
+    - 함수 : function Increase(){}
+    - 환경 : var count = 10;
+여기서 counter1, counter2 함수가지고는 count 변수의 값을 직접 제어할 수 없다, count 변수는 makecounterfunction 안에 있고 여기선 increse함수밖에 없기때문이다. 이 원리를 이용해 private한 변수를 활용할 수 있다 아래서 확인해보자.
+
+---
+
 간단하게 클로저의 두가지 개념을 이해하도록 하자.  
 
 1) 외부 함수가 소멸된 뒤에도 내부 함수는 외부 함수의 지역 변수에 접근 할 수 있다.  
