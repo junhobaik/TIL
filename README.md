@@ -16,3 +16,9 @@
     - `Update [javascript] scope`
 - 기존 TIL의 **잘못된** 내용 수정
     - `Fix [javascript] scope`
+    
+## Issue Rule
+- "해야할 일" / "해당 문서" / "추가하거나 수정할 내용"(optional)
+  - `Add / [javascript] this`
+  - `Update / [javascript] this / bind()`
+  - `Fix / [javascript] this / apply()`
