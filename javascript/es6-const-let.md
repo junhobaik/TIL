@@ -121,6 +121,47 @@ var 와 let, const의 차이점을 알아보았고, 그렇다면 let, const의 �
 
 
 
+---
+
+### etc.
+
+#### immutable array 만들기 (불변의 어레이 만들기)
+
+```javascript
+const list = [1,2,3];
+
+const list2 = list;
+list2.push(4);
+
+// 원하는 결과
+// list = [1,2,3]
+// list2 = [1,2,3,4]
+// 'list === list2' 가 false
+
+console.log('1, '+list);
+console.log('2, '+list2);
+console.log(list === list2);
+
+// 실제 결과
+// list = [1,2,3,4]
+// list2 = [1,2,3,4]
+// 'list === list2' 가 true
+
+// 원하는 결과를 얻기 위한 방법
+const newlist = [1,2,3]
+const newlist2 = [].concat(newlist);
+newlist2.push(4);
+
+console.log('1, '+newlist);
+console.log('2, '+newlist2);
+console.log(newlist === newlist2);
+
+// newlist = [1,2,3]
+// newlist2 = [1,2,3,4]
+// 'newlist === newlist2' false
+```
+
+
 
 
 
