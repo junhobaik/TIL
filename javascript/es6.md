@@ -20,26 +20,29 @@ ES6 환경으로 구현 후 Babel을 이용 ES6로 변환하여 사용하면 호
 
 
 
-선택된 사항은 정리할 내용이 많아 레포지토리 내에 따로 문서로 작성되어있는 것들.
+선택되지 않은 사항은 정리할 내용이 많아 레포지토리 내에 따로 문서로 작성되어있는 것들.
 
-선택되지 않은 사항은 다소 내용이 작아 해당 문서 아래에 작성되어있다.
+선택된 사항은 다소 내용이 작아 해당 문서 아래에 작성되어있다.
 
 
 
-- [x] const / let
-- [x] String methods
+- [ ] const / let
+- [ ] String methods
    1. startsWith()
    2. endsWith()
    3. includes()
-- [x] for of 
-- [x] Spread Operator
-- [x] from
-- [ ] <a href="#1">간단히 객체 생성하기</a>
-- [ ] <a href="#2">Destructuring Array</a>
+- [ ] for of 
+- [ ] Spread Operator
+- [ ] from
+- [x] <a href="#1">간단히 객체 생성하기</a>
+- [x] <a href="#2">Destructuring Array</a>
 
 
-- [ ] <a href="#3">Destructuring Object</a>
+- [x] <a href="#3">Destructuring Object</a>
 - [ ] Set, WeakSet / Map, WeakMap
+- [x] <a href="#4">Template</a>
+- [x] <a href="#5">Tagged Template Literals</a>
+- [ ] Arrow Function
 
 
 
@@ -116,6 +119,50 @@ document.querySelector('div').addEventListener("Click", function( { target } ){
 ```
 
 
+
+<a name="4"/>
+
+ ### Template 처리
+
+```javascript
+const data = [{}]; //json data...
+
+const template = `<div> hi ${data[0].name} </div>`;
+```
+
+<a name="5"/>
+
+### Tagged Template Literals
+
+```javascript
+const data = [
+  {
+    name:'baik',
+    age:27
+  },
+  {
+    name:'kim',
+    age:17
+  }
+];
+
+
+function fn(tags, name, age, msg){
+  if(age < 20){
+    msg = "미성년자입니다"
+  }else{ 
+    msg = "성인입니다"; 
+  }
+  
+  return (tags[0] + name + tags[1] + age + tags[2] + msg + tags[3]);
+}
+
+data.forEach((v)=>{
+  let template = fn`<div>hi ${v.name}, age:${v.age}, ${v.msg}</div>`;
+  console.log(template);
+});
+
+```
 
 
 
