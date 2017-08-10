@@ -43,6 +43,10 @@ ES6 환경으로 구현 후 Babel을 이용 ES6로 변환하여 사용하면 호
 - [x] <a href="#4">Template</a>
 - [x] <a href="#5">Tagged Template Literals</a>
 - [ ] Arrow Function
+- [x] <a href="#6">Function default paramater</a>
+- [x] <a href="#7">Rest paramater</a>
+- [ ] Class
+- [ ] Object assign
 
 
 
@@ -165,6 +169,49 @@ data.forEach((v)=>{
 ```
 
 
+
+<a name="6"/>
+
+### Function default paramater
+
+```javascript
+function sum(a, b){
+  b = b || 1; // b인자가 없을때 기본값 지정
+  return a + b;
+}
+
+function es6_sum(a, b=1){ //파라메터에 기본 값 지정
+  return a + b;
+}
+
+console.log(sum(1));
+console.log(es6_sum(1));
+```
+
+
+
+<a name="7"/>
+
+### Rest paramaters
+
+```javascript
+function checkString() {
+  let arg = Array.from(arguments);
+  const result = arg.every((v) => typeof v === "string");
+  console.log(result);
+}
+
+function es6_checkString(...arg) { //rest paramater
+  const result = arg.every((v) => typeof v === "string");
+  console.log(result);
+}
+
+checkString(1,2,"3");
+checkString("1","2","3");
+
+es6_checkString(1,2,"3");
+es6_checkString("1","2","3");
+```
 
 
 
