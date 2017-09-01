@@ -84,3 +84,10 @@ console.log(myInfo);
 
 ```
 
+
+
+---
+
+## reference
+
+- [모던 자바스크립트(javascript) 개발을 위한 ES6 강좌](https://www.inflearn.com/course/es6-%ea%b0%95%ec%a2%8c-%ec%9e%90%eb%b0%94%ec%8a%a4%ed%81%ac%eb%a6%bd%ed%8a%b8/)
