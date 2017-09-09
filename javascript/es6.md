@@ -47,6 +47,9 @@ ES6 환경으로 구현 후 Babel을 이용 ES6로 변환하여 사용하면 호
 - [x] <a href="#7">Rest paramater</a>
 - [ ] Class
 - [ ] Object assign
+- [ ] setPrototypeOf
+- [ ] module
+- [ ] proxy
 
 
 
