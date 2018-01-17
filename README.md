@@ -1,6 +1,8 @@
 # TIL
 > Today I Learned
 
+## 블로그 운영으로 해당 리포지토리 중단
+
 ---
 
 ## Major Rule
